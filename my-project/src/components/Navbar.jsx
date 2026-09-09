@@ -12,11 +12,11 @@ const Navbar = () => {
         </div>
 
         <nav className="hidden md:flex gap-8 font-medium">
-          <a href="/" className=" hover:text-orange-400 transition-duration-300">Home</a>
-          <a href="/" className="">Features</a>
-          <a href="/" className="">Pricing</a>
-          <a href="/" className="">Testimonials</a>
-          <a href="/" className="">Testimonials</a>
+          <a href="/" className="hover:text-orange-400 transition-duration-300">Home</a>
+          <a href="/" className="hover:text-orange-400 transition-duration-300">Features</a>
+          <a href="/" className="hover:text-orange-400 transition-duration-300">Pricing</a>
+          <a href="/" className="hover:text-orange-400 transition-duration-300">Testimonials</a>
+          <a href="/" className="hover:text-orange-400 transition-duration-300">Testimonials</a>
         </nav>
 
         <button>
