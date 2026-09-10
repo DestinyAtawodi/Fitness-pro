@@ -1,9 +1,9 @@
 import React from 'react'
 import {FaMoon, FaSun, FaDumbbell} from 'react-icons/fa'
 
-const Navbar = () => {
+const Navbar = ({ darkMode, setDarkMode }) => {
   return (
-    <header>
+    <header className="bg-white dark:bg-neutral-900 dark:text-white shadow-md">
       <div className="container flex items-center justify-between px-8 py-4">
 
         <div className="flex items-center gap-2">
@@ -12,15 +12,24 @@ const Navbar = () => {
         </div>
 
         <nav className="hidden md:flex gap-8 font-medium">
-          <a href="/" className="hover:text-orange-400 transition-duration-300">Home</a>
-          <a href="/" className="hover:text-orange-400 transition-duration-300">Features</a>
-          <a href="/" className="hover:text-orange-400 transition-duration-300">Pricing</a>
-          <a href="/" className="hover:text-orange-400 transition-duration-300">Testimonials</a>
-          <a href="/" className="hover:text-orange-400 transition-duration-300">Testimonials</a>
+          <a href="/" className="hover:text-orange-400 text-neutral-400 dark:text-neutral-300 transition-duration-300">Home</a>
+          <a href="/" className="hover:text-orange-400 text-neutral-400 dark:text-neutral-300 transition-duration-300">Features</a>
+          <a href="/" className="hover:text-orange-400 text-neutral-400 dark:text-neutral-300 transition-duration-300">Pricing</a>
+          <a href="/" className="hover:text-orange-400 text-neutral-400 dark:text-neutral-300 transition-duration-300">Testimonials</a>
+          <a href="/" className="hover:text-orange-400 text-neutral-400 dark:text-neutral-300 transition-duration-300">Testimonials</a>
         </nav>
 
-        <button>
-          <FaSun className="text-yellow-400 text-lg" />
+        <button
+        onClick={() => {
+          setDarkMode(!darkMode)
+        }}
+        > {
+          darkMode ? (
+            <FaSun className="text-yellow-400 text-lg" />
+          ) : (
+            <FaMoon className="text-gray-900 dark:text-gray-300 text-lg" />
+          )
+        }
         </button>
 
       </div>
