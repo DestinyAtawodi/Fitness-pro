@@ -1,5 +1,4 @@
- import React from 'react'
- import {useState, useEffect} from 'react'
+ import React, { useEffect, useState } from 'react'
 import './App.css'
 import Navbar from './components/Navbar' 
 import Hero from './components/Hero'
@@ -19,7 +18,7 @@ const App = () => {
       document.documentElement.classList.remove("dark")
       localStorage.setItem("theme", "light")
     }
-  })
+  }, [darkMode])
   return (
     <>
     <div>
