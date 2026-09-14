@@ -3,7 +3,7 @@ import {FaMoon, FaSun, FaDumbbell} from 'react-icons/fa'
 const Navbar = ({ darkMode, setDarkMode }) => {
   return (
     <header className="bg-white dark:bg-neutral-900 dark:text-white shadow-md">
-      <div className="container flex items-center justify-between px-8 py-4 duration-300">
+      <div className="container flex items-center justify-between px-8 py-4">
 
         <div className="flex items-center gap-2">
           <FaDumbbell className="text-orange-400 text-2xl"/>
@@ -19,6 +19,7 @@ const Navbar = ({ darkMode, setDarkMode }) => {
         </nav>
 
         <button
+        className="ml-6 p-2 rounded-full bg-gray-200 dark:bg-neutral-800 hover:bg-gray-300 dark:hover:bg-neutral-700 transition-colors duration-300"
         type="button"
         aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
         onClick={() => setDarkMode((currentMode) => !currentMode)}
