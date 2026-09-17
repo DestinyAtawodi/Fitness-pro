@@ -8,6 +8,15 @@ const Hero = () => {
         aria-hidden="true"
       />
 
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="hero-grid absolute inset-0 opacity-40" />
+        <div className="hero-orbit absolute left-[8%] top-[18%] h-40 w-40 rounded-full border border-orange-300/30" />
+        <div className="hero-orbit-reverse absolute bottom-[10%] right-[8%] h-64 w-64 rounded-full border border-orange-400/20" />
+        <div className="hero-drift absolute left-[17%] top-[28%] h-3 w-3 rounded-full bg-orange-400 shadow-[0_0_20px_6px_rgba(251,146,60,0.35)]" />
+        <div className="hero-drift-reverse absolute right-[18%] top-[20%] h-2 w-2 rounded-full bg-red-400 shadow-[0_0_18px_5px_rgba(248,113,113,0.3)]" />
+        <div className="absolute bottom-10 left-1/2 h-px w-2/3 -translate-x-1/2 bg-gradient-to-r from-transparent via-orange-300/30 to-transparent" />
+      </div>
+
       <div className="container mx-auto relative flex flex-col md:flex-row items-center justify-between gap-8 px-8 py-16 md:py-24">
         <div className="max-w-xl">
           <p

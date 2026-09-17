@@ -24,12 +24,49 @@
   100% { transform: scale(1.4); opacity: 0; }
 }
 
+@keyframes hero-orbit {
+  from { transform: rotate(0deg) translateX(10px) rotate(0deg); }
+  to { transform: rotate(360deg) translateX(10px) rotate(-360deg); }
+}
+
+@keyframes hero-drift {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(24px, 18px, 0); }
+}
+
+@keyframes hero-drift-reverse {
+  0%, 100% { transform: translate3d(0, 0, 0); }
+  50% { transform: translate3d(-20px, 16px, 0); }
+}
+
 .animate-fade-up {
   animation: fade-up 0.7s cubic-bezier(0.16, 1, 0.3, 1) both;
 }
 
 .animate-float {
   animation: float-slow 6s ease-in-out infinite;
+}
+
+.hero-grid {
+  background-image: radial-gradient(circle, rgb(249 115 22 / 0.18) 1px, transparent 1px);
+  background-size: 28px 28px;
+  mask-image: linear-gradient(to bottom, black, transparent 75%);
+}
+
+.hero-orbit {
+  animation: hero-orbit 16s linear infinite;
+}
+
+.hero-orbit-reverse {
+  animation: hero-orbit 22s linear infinite reverse;
+}
+
+.hero-drift {
+  animation: hero-drift 7s ease-in-out infinite;
+}
+
+.hero-drift-reverse {
+  animation: hero-drift-reverse 9s ease-in-out infinite;
 }
 
 .pulse-ring::before {
@@ -42,7 +79,8 @@
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .animate-fade-up, .animate-float, .pulse-ring::before {
+  .animate-fade-up, .animate-float, .hero-orbit, .hero-orbit-reverse,
+  .hero-drift, .hero-drift-reverse, .pulse-ring::before {
     animation: none !important;
   }
 }
